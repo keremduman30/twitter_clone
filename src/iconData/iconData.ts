@@ -7,13 +7,17 @@ import {
   HiHashtag,
   IoNotificationsOutline,
   RiHome7Fill,
+  TfiGallery,
+  AiOutlineFileGif,
+  BsEmojiSmile,
+  BsFillBarChartLineFill,
 } from "./icon";
 
 export type SidebarIconType = {
   icon: string;
-  name: string;
+  name?: string;
 };
-export const sideBarIconList: SidebarIconType[] = [
+const sideBarIconList: SidebarIconType[] = [
   { icon: RiHome7Fill, name: "Home" },
   { icon: HiHashtag, name: "Explore" },
   { icon: IoNotificationsOutline, name: "Notifications" },
@@ -23,3 +27,12 @@ export const sideBarIconList: SidebarIconType[] = [
   { icon: FaRegUser, name: "Profile" },
   { icon: CgMoreO, name: "More" },
 ];
+const contentIconList: SidebarIconType[] = [
+  { icon: TfiGallery },
+  { icon: AiOutlineFileGif },
+  { icon: BsEmojiSmile },
+  { icon: AiOutlineMail },
+  { icon: BsFillBarChartLineFill },
+];
+
+export { sideBarIconList, contentIconList };
