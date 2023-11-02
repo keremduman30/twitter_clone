@@ -6,6 +6,9 @@ import { CgList } from "react-icons/cg";
 import { FaRegUser } from "react-icons/fa6";
 import { CgMoreO } from "react-icons/cg";
 import { HiHashtag } from "react-icons/hi2";
+import { TfiGallery } from "react-icons/tfi";
+import { AiOutlineFileGif } from "react-icons/ai";
+import { BsFillBarChartLineFill, BsEmojiSmile } from "react-icons/bs";
 export {
   RiHome7Fill,
   IoNotificationsOutline,
@@ -15,5 +18,8 @@ export {
   FaRegUser,
   CgMoreO,
   HiHashtag,
-  
+  TfiGallery,
+  AiOutlineFileGif,
+  BsEmojiSmile,
+  BsFillBarChartLineFill,
 };
