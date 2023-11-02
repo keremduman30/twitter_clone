@@ -18,40 +18,44 @@ const ContentListItem = ({ item }: ContentItemType) => {
       <div className="flex flex-col justify-center my-2 w-full">
         <div className="flex justify-between">
           <div>
-            <div className="flex gap-2">
-              <span className="text-base font-bold">{item.name}</span>
-              <span className="text-gray-400">@{item.name}</span>
-              <span className="text-gray-400">
+            <div className="flex gap-1">
+              <span className="text-sm md:text-base font-bold">
+                {item.name}
+              </span>
+              <span className="text-sm md:text-base text-gray-600">
+                @{item.name}
+              </span>
+              <span className="text-sm md:text-base text-gray-600">
                 {item.timestamp?.toDate().toLocaleTimeString("tr-TR")}
               </span>
             </div>
           </div>
-          <div className="flex gap-1  cursor-pointer">
+          <div className="flex gap-1  cursor-pointer items-center">
             <div className="w-1 h-1 rounded-full bg-gray-900" />
             <div className="w-1 h-1 rounded-full bg-gray-900" />
             <div className="w-1 h-1 rounded-full bg-gray-900" />
           </div>
         </div>
-        <h1 className="text-xl mb-2">{item.post}</h1>
+        <h1 className="text-base md:text-xl mb-2">{item.post}</h1>
         {item.image && (
           <img
             src={item.image}
-            className="w-full h-[500px] object-cover rounded-xl shadow-sm my-2 mb-2"
+            className="w-full h-[50%] md:h-[500px] object-cover rounded-xl shadow-sm my-2 mb-2"
             alt=""
           />
         )}
-        <div className="flex justify-between mr-5 my-2 text-xl ">
+        <div className="flex justify-between mr-5 my-2 text-base  md:text-xl ">
           <div>
-            <FaRegComment className="cursor-pointer hover:text-primary-dark " />
+            <FaRegComment className=" cursor-pointer hover:text-primary-dark " />
           </div>
           <div>
-            <AiOutlineRetweet className="cursor-pointer hover:text-primary-dark " />
+            <AiOutlineRetweet className=" cursor-pointer hover:text-primary-dark " />
           </div>
           <div>
-            <MdOutlineFavoriteBorder className="cursor-pointer hover:text-red-600 " />
+            <MdOutlineFavoriteBorder className=" cursor-pointer hover:text-red-600 " />
           </div>
           <div>
-            <LuShare className="cursor-pointer hover:text-blue-500 " />
+            <LuShare className=" cursor-pointer hover:text-blue-500 " />
           </div>
         </div>
       </div>

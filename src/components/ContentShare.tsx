@@ -39,11 +39,11 @@ const ContentShare = () => {
           </div>
 
           <div className="flex justify-between my-5 items-center ">
-            <div className="flex gap-5">
+            <div className="flex gap-3 md:gap-5">
               {contentIconList.map((e) => (
                 <span
                   key={e.icon}
-                  className="text-primary-base text-xl cursor-pointer"
+                  className="text-primary-base text-base md:text-xl cursor-pointer"
                 >
                   <e.icon />
                 </span>
@@ -52,7 +52,7 @@ const ContentShare = () => {
             <button
               onClick={handlerClick}
               type="button"
-              className={`w-32 p-2 rounded-full bg-primary-base text-white text-xl hover:bg-primary-dark   transform transition-colors duration-300 ${
+              className={`w-20 md:w-24 lg:w-32 p-2 rounded-full bg-primary-base text-white text-xl hover:bg-primary-dark   transform transition-colors duration-300 ${
                 text === "" && "opacity-50"
               }`}
             >

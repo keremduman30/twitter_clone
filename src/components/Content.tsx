@@ -3,6 +3,7 @@ import ContentShare from "./ContentShare";
 import { Timestamp, collection, onSnapshot, query } from "@firebase/firestore";
 import db from "../db/firebase";
 import ContentListItem from "./ContentListItem";
+import { orderBy } from "firebase/firestore";
 export type PostType = {
   name?: string;
   post: string;
@@ -12,7 +13,7 @@ export type PostType = {
 const Content = () => {
   const [tweets, settweets] = useState<PostType[]>([]);
   useEffect(() => {
-    const q = query(collection(db, "posts"));
+    const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
     onSnapshot(q, (querySnapshot) => {
       const tweetList: PostType[] = [];
 
@@ -31,7 +32,6 @@ const Content = () => {
         };
         tweetList.push(tweet);
       });
-
       settweets(tweetList);
     });
   }, []);
