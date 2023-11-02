@@ -3,7 +3,7 @@ import { Timeline } from "react-twitter-widgets";
 
 const RightSidebar = () => {
   return (
-    <div className="flex-[1] flex flex-col items-center mx-5 ">
+    <div className="hidden flex-[1] md:flex flex-col items-center mx-2 lg:mx-5 ">
       <div className="flex items-center gap-2 p-2 px-5 bg-gray-200 rounded-full  my-2 focus-within:ring-1 focus-within:ring-primary-base focus-within:bg-white">
         <AiOutlineSearch className="text-xl text-gray-dark focus-within:text-primary-base " />
         <input

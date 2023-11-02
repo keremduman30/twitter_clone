@@ -2,8 +2,8 @@ import { SidebarIconType } from "../iconData/iconData";
 
 type SideBarItemType = {
   item: SidebarIconType;
-  active: string;
-  setCurrentName(name: string): void;
+  active?: string;
+  setCurrentName(name?: string): void;
 };
 
 const SideBarItem = ({ item, active, setCurrentName }: SideBarItemType) => {
@@ -24,7 +24,7 @@ const SideBarItem = ({ item, active, setCurrentName }: SideBarItemType) => {
             <item.icon />
           </span>
           <h1
-            className={`group-hover:text-primary-dark font-bold text-lg ${
+            className={`hidden lg:flex group-hover:text-primary-dark font-bold text-lg ${
               isActive ? "text-primary-dark font-bold" : ""
             }`}
           >

@@ -1,6 +1,6 @@
 const SideBarUser = () => {
   return (
-    <div className="my-5 flex justify-between items-center pr-8  rounded-full hover:bg-primary-light">
+    <div className="hidden xl:flex my-5  justify-between items-center pr-8  rounded-full hover:bg-primary-light">
       <img
         className="w-11 h-11 rounded-full"
         src="https://avatars.githubusercontent.com/u/65291634?v=4"
